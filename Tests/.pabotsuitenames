@@ -1,0 +1,7 @@
+datasources:c3351d71a85a9866bb21552be2850764d8cc09b1
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:068e4553361afc02d4878e83f3942cd679e73eeb
+--test TestDemo3 dataDriven.Validate unsuccesful login
+--test TestDemo3 dataDriven.Validate cart display on shopping page
+--test TestDemo3 dataDriven.Select the User radio button

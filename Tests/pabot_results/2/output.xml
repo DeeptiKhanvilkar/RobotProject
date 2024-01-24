@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20240111 16:38:34.564" rpa="false" schemaversion="4">
+<suite id="s1" name="TestDemo3 dataDriven" source="C:\Users\1030968\PycharmProjects\RobotFramework\Tests\TestDemo3_dataDriven.robot">
+<test id="s1-t1" name="Select the User radio button" line="54">
+<kw name="Launch Website" library="Generic" type="SETUP">
+<arg>Edge</arg>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>../resources/${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240111 16:38:34.841" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<status status="PASS" starttime="20240111 16:38:34.841" endtime="20240111 16:38:41.390"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240111 16:38:41.391" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<status status="PASS" starttime="20240111 16:38:41.390" endtime="20240111 16:38:42.472"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 16:38:42.472" endtime="20240111 16:38:42.687"/>
+</kw>
+<status status="PASS" starttime="20240111 16:38:34.841" endtime="20240111 16:38:42.687"/>
+</kw>
+<kw name="fill the form and select user option" library="homePage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 16:38:42.693" level="INFO">Typing text 'rahulshettyacademy' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20240111 16:38:42.690" endtime="20240111 16:38:43.071"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${Valid_Username}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 16:38:43.073" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20240111 16:38:43.163" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240111 16:38:43.324" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240111 16:38:43.071" endtime="20240111 16:38:43.325"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[value='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 16:38:43.329" level="INFO">Clicking element 'css:input[value='user']'.</msg>
+<status status="PASS" starttime="20240111 16:38:43.325" endtime="20240111 16:38:43.564"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>css:select.form-control</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20240111 16:38:43.570" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<status status="PASS" starttime="20240111 16:38:43.564" endtime="20240111 16:38:43.855"/>
+</kw>
+<kw name="wait till locator passed on the landing page" library="Generic">
+<arg>${ok_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 16:38:43.858" endtime="20240111 16:38:43.921"/>
+</kw>
+<status status="PASS" starttime="20240111 16:38:43.857" endtime="20240111 16:38:43.921"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ok_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 16:38:43.921" level="INFO">Clicking button 'id:okayBtn'.</msg>
+<status status="PASS" starttime="20240111 16:38:43.921" endtime="20240111 16:38:44.057"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${ok_button}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240111 16:38:44.057" endtime="20240111 16:38:44.385"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20240111 16:38:44.387" level="INFO">Selecting checkbox 'terms'.</msg>
+<status status="PASS" starttime="20240111 16:38:44.385" endtime="20240111 16:38:44.550"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20240111 16:38:44.554" level="INFO">Verifying checkbox 'terms' is selected.</msg>
+<status status="PASS" starttime="20240111 16:38:44.550" endtime="20240111 16:38:44.606"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 16:38:54.615" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240111 16:38:44.606" endtime="20240111 16:38:54.615"/>
+</kw>
+<status status="PASS" starttime="20240111 16:38:42.688" endtime="20240111 16:38:54.615"/>
+</kw>
+<kw name="Close Browser Sessions" library="Generic" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240111 16:38:54.615" endtime="20240111 16:38:57.062"/>
+</kw>
+<status status="PASS" starttime="20240111 16:38:54.615" endtime="20240111 16:38:57.063"/>
+</kw>
+<status status="PASS" starttime="20240111 16:38:34.841" endtime="20240111 16:38:57.063"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" starttime="20240111 16:38:34.588" endtime="20240111 16:38:57.063"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestDemo3 dataDriven">TestDemo3 dataDriven</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

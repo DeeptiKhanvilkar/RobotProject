@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20240111 17:16:51.989" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\1030968\PycharmProjects\RobotFramework\tests">
+<suite id="s1-s1" name="TestDemo1" source="C:\Users\1030968\PycharmProjects\RobotFramework\tests\TestDemo1.robot">
+<test id="s1-s1-t1" name="Select the User radio button" line="29">
+<kw name="Launch Website" library="Generic" type="SETUP">
+<arg>Chrome</arg>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>../resources/${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240111 17:16:52.448" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240111 17:16:52.448" endtime="20240111 17:16:57.660"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240111 17:16:57.660" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<status status="PASS" starttime="20240111 17:16:57.660" endtime="20240111 17:16:59.090"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 17:16:59.092" endtime="20240111 17:16:59.631"/>
+</kw>
+<status status="PASS" starttime="20240111 17:16:52.448" endtime="20240111 17:16:59.631"/>
+</kw>
+<kw name="fill the form and select user option">
+<arg>${Valid_Username}</arg>
+<arg>${Valid_Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:16:59.665" level="INFO">Typing text 'rahulshettyacademy' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20240111 17:16:59.663" endtime="20240111 17:17:00.338"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:17:00.338" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20240111 17:17:00.494" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240111 17:17:00.636" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240111 17:17:00.338" endtime="20240111 17:17:00.636"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[value='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 17:17:00.638" level="INFO">Clicking element 'css:input[value='user']'.</msg>
+<status status="PASS" starttime="20240111 17:17:00.636" endtime="20240111 17:17:00.857"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>css:select.form-control</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20240111 17:17:00.859" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<status status="PASS" starttime="20240111 17:17:00.859" endtime="20240111 17:17:01.298"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:okayBtn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240111 17:17:01.298" endtime="20240111 17:17:01.401"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:okayBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 17:17:01.401" level="INFO">Clicking button 'id:okayBtn'.</msg>
+<status status="PASS" starttime="20240111 17:17:01.401" endtime="20240111 17:17:01.548"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:17:06.548" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240111 17:17:01.548" endtime="20240111 17:17:06.548"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20240111 17:17:06.548" level="INFO">Selecting checkbox 'terms'.</msg>
+<status status="PASS" starttime="20240111 17:17:06.548" endtime="20240111 17:17:06.678"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20240111 17:17:06.678" level="INFO">Verifying checkbox 'terms' is selected.</msg>
+<status status="PASS" starttime="20240111 17:17:06.678" endtime="20240111 17:17:06.718"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:17:16.720" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240111 17:17:06.718" endtime="20240111 17:17:16.720"/>
+</kw>
+<status status="PASS" starttime="20240111 17:16:59.660" endtime="20240111 17:17:16.721"/>
+</kw>
+<kw name="Close Browser Sessions" library="Generic" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240111 17:17:16.723" endtime="20240111 17:17:19.426"/>
+</kw>
+<status status="PASS" starttime="20240111 17:17:16.722" endtime="20240111 17:17:19.427"/>
+</kw>
+<status status="PASS" starttime="20240111 17:16:52.448" endtime="20240111 17:17:19.427"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" starttime="20240111 17:16:52.034" endtime="20240111 17:17:19.428"/>
+</suite>
+<status status="PASS" starttime="20240111 17:16:51.989" endtime="20240111 17:17:19.428"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestDemo1">Tests.TestDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
