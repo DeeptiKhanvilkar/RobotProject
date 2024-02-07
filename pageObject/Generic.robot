@@ -9,7 +9,7 @@ ${Invalid_Password}      1234
 ${Valid_Username}       rahulshettyacademy
 ${username}       rahulshettyacademy
 ${Valid_Password}       learning
-${browser}      Chrome
+${browser}      Edge
 
 *** Keywords ***
 # This is if we pass browser name as argument
